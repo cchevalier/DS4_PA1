@@ -20,7 +20,7 @@ data$Datetime <- as.POSIXct(datetime)
 # Use of png() for better rendering as suggested in discussion forum
 png(file="plot3.png", bg="transparent", height=480, width=480)
 
-par(mfrow=c(1,1), pty="s", bg="white")
+par(mfrow=c(1,1))
 with(data, {
   plot(Sub_metering_1~Datetime, type="l", ylab="Energy sub metering", xlab="")
   lines(Sub_metering_2~Datetime,col='Red')

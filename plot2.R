@@ -20,7 +20,7 @@ data$Datetime <- as.POSIXct(datetime)
 # Use of png() for better rendering as suggested in discussion forum
 png(file="plot2.png", bg="transparent", height=480, width=480)
 
-par(mfrow=c(1,1), pty="m", bg="white")
+par(mfrow=c(1,1))
 plot(data$Global_active_power~data$Datetime, type ="l", ylab = "Global Active Power (kilowatts)", xlab = "")
 
 dev.off()

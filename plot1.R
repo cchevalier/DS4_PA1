@@ -20,7 +20,7 @@ data$Datetime <- as.POSIXct(datetime)
 # Use of png() for better rendering as suggested in discussion forum
 png(file="plot1.png", bg="transparent", height=480, width=480)
 
-par(mfrow=c(1,1), pty="m", bg="white")
+par(mfrow=c(1,1))
 hist(data$Global_active_power, main="Global Active Power", xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
 
 dev.off()
