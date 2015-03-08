@@ -1,4 +1,4 @@
-# plot1.R: Histogram of Global Active Power
+# plot2.R: Time Series plot of Global Active Power
 
 
 # load all data
@@ -15,12 +15,12 @@ data$Datetime <- as.POSIXct(datetime)
 
 
 
-# Plot1: histogram
+# Plot2: Time Series plot of Global Active Power
 
 # Use of png() for better rendering as suggested in discussion forum
-png(file="plot1.png", bg="transparent", height=480, width=480)
+png(file="plot2.png", bg="transparent", height=480, width=480)
 
 par(mfrow=c(1,1), pty="m", bg="white")
-hist(data$Global_active_power, main="Global Active Power", xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
+plot(data$Global_active_power~data$Datetime, type ="l", ylab = "Global Active Power (kilowatts)", xlab = "")
 
 dev.off()
